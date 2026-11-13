@@ -65,30 +65,6 @@ The repository already includes dashboard data built from the full-scale run (`w
 Python can't run on a free static host, so `journeylab/dashboard.py` pre-computes everything into two small
 JSON files: `web/data/dashboard.json` (~50 KB) and `web/data/sessions.json` (~1 MB).
 
-## Put it on GitHub and host it for free
-
-```bash
-git init
-git add .
-git commit -m "Journey Friction Lab: generator, pipeline, tests, dashboard"
-git branch -M main
-git remote add origin https://github.com/<your-username>/journey-friction-lab.git
-git push -u origin main
-```
-
-`output/` (the 2.5 GB generated data) is in `.gitignore`, so the push stays small. After the push, GitHub Actions
-runs the tests automatically (`.github/workflows/tests.yml`).
-
-**Vercel (recommended, free Hobby plan for personal projects):**
-
-1. vercel.com → *Sign up with GitHub* → **Add New… → Project** → import the repository.
-2. Set **Root Directory** = `web` and **Framework Preset** = `Other`. Leave the Build Command empty.
-3. Click **Deploy**. You get a link like `https://journey-friction-lab.vercel.app`. Every `git push` redeploys it.
-
-**GitHub Pages (free for public repositories):** go to *Settings → Pages → Source: GitHub Actions*. The included
-workflow `.github/workflows/pages.yml` publishes `web/` to `https://<your-username>.github.io/journey-friction-lab/`.
-Netlify and Cloudflare Pages also work the same way: publish directory `web`, no build command.
-
 More commands:
 
 | Command | What it does |
