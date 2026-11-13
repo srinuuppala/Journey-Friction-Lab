@@ -1,0 +1,22 @@
+[project]
+name = "journeylab"
+version = "1.0.0"
+description = "Synthetic cross-channel journey data generator and friction analytics (web, app, support, purchase)"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "pandas>=2.1"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+journeylab = "journeylab.cli:main"
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["journeylab"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

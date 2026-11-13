@@ -1,0 +1,15 @@
+# generated datasets are large (up to ~2.5 GB) -> regenerate them with the generate command
+output/
+*.sqlite
+# python caches
+__pycache__/
+*.pyc
+.pytest_cache/
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+# local virtual environments
+.venv/
+venv/

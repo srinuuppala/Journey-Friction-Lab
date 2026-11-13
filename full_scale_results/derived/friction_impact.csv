@@ -1,0 +1,13 @@
+channel,friction_event,error_code,sessions_affected,conversion_rate_affected,baseline_conversion_same_stage,conversion_gap_pp,est_lost_conversions,support_contact_rate
+app,payment_error,PAY_GATEWAY_TIMEOUT,67,0.2687,1.0,73.13,49.0,0.1791
+web,shipping_validation_error,ADDR_VALIDATION_FAILED,100,0.39,0.814,42.4,42.4,0.02
+web,payment_error,PAY_DECLINED,54,0.4259,1.0,57.41,31.0,0.1667
+web,payment_error,PAY_3DS_FAILED,39,0.3846,1.0,61.54,24.0,0.1026
+app,shipping_validation_error,ADDR_VALIDATION_FAILED,32,0.3125,0.7559,44.34,14.2,0.0
+app,payment_error,PAY_DECLINED,23,0.4783,1.0,52.17,12.0,0.1304
+app,payment_error,PAY_3DS_FAILED,11,0.4545,1.0,54.55,6.0,0.0
+app,add_to_cart_failed,CART_API_500,93,0.043,0.0631,2.01,1.9,0.0
+app,page_error,HTTP_503,364,0.0412,0.044,0.28,1.0,0.011
+web,login_failed,AUTH_INVALID_CREDENTIALS,9,0.0,0.0457,4.57,0.4,0.1111
+web,page_error,HTTP_503,876,0.0696,0.0454,-2.43,0.0,0.008
+app,login_failed,AUTH_INVALID_CREDENTIALS,10,0.1,0.044,-5.6,0.0,0.0

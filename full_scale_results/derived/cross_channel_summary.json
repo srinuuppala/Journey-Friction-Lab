@@ -1,0 +1,10 @@
+{
+  "abandoned_checkout_sessions": 1136,
+  "cross_channel_journeys": 1474,
+  "journeys": 83610,
+  "journeys_with_support": 1332,
+  "recovered_after_support": 3,
+  "recovered_rate": 0.0326,
+  "recovered_within_7d": 37,
+  "support_contact_within_7d": 53
+}

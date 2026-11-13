@@ -1,0 +1,231 @@
+{
+  "bot_detection": {
+    "f1": 0.978,
+    "fn": 179,
+    "fp": 83,
+    "human_false_positive_rate": 0.00088,
+    "precision": 0.9859,
+    "predicted": 5904,
+    "recall": 0.9702,
+    "recall_by_type": {
+      "cart_bot": 1.0,
+      "cookie_replay": 1.0,
+      "declared_crawler": 1.0,
+      "disguised_scraper": 1.0,
+      "stealth_scraper": 0.7432
+    },
+    "tp": 5821,
+    "true": 6000
+  },
+  "cross_channel_recovery": {
+    "note": "observed < true because cross-device returns are only linkable when identity is stitched with consent",
+    "observed_recovered_within_7d": 37,
+    "observed_recovery_rate": 0.0326,
+    "true_abandoned_checkout_sessions": 1136,
+    "true_recovered_within_7d": 46,
+    "true_recovery_rate": 0.0405
+  },
+  "deduplication": {
+    "conversions_after_dedup": 4178,
+    "double_counted_before_dedup": 209,
+    "f1": 1.0,
+    "fn": 0,
+    "fp": 0,
+    "orders": 4178,
+    "precision": 1.0,
+    "predicted": 209,
+    "raw_purchase_events": 4387,
+    "recall": 1.0,
+    "reconciled": true,
+    "tp": 209,
+    "true": 209
+  },
+  "experiments": [
+    {
+      "abs_lift": 0.06955,
+      "name": "one_page_checkout",
+      "p_value": 0.004011,
+      "true_multiplier": 2.5,
+      "verdict": "detected"
+    },
+    {
+      "abs_lift": 0.04076,
+      "name": "recommendation_carousel",
+      "p_value": 0.0,
+      "true_multiplier": 1.25,
+      "verdict": "detected"
+    },
+    {
+      "abs_lift": 0.03538,
+      "name": "free_shipping_banner",
+      "p_value": 0.010682,
+      "true_multiplier": 1.5,
+      "verdict": "detected"
+    },
+    {
+      "abs_lift": 0.02433,
+      "name": "app_onboarding_v2",
+      "p_value": 0.210838,
+      "true_multiplier": 1.0,
+      "verdict": "correct_null"
+    },
+    {
+      "abs_lift": 0.07117,
+      "name": "search_autocomplete",
+      "p_value": 0.0,
+      "true_multiplier": 1.5,
+      "verdict": "detected"
+    },
+    {
+      "abs_lift": NaN,
+      "name": "guest_checkout_express",
+      "p_value": NaN,
+      "true_multiplier": 1.0,
+      "verdict": "no_traffic_as_expected"
+    }
+  ],
+  "funnel": {
+    "clean_conversion_rate": 0.045206,
+    "clean_sessions": 92421,
+    "funnel_metrics_sha256": "d9dd5c9ce6eb4c88c9863544f898554a3dbdcb108fd24a279fd7cadcd95e4a5a",
+    "naive_conversion_rate": 0.04462,
+    "stage_reach": {
+      "add_to_cart": 19154,
+      "checkout_start": 5314,
+      "payment_submitted": 4299,
+      "product_view": 70021,
+      "purchase": 4178,
+      "visit": 92421
+    }
+  },
+  "identity_link_review": {
+    "f1": 0.7323,
+    "fn": 61,
+    "fp": 502,
+    "precision": 0.6053,
+    "predicted": 1272,
+    "recall": 0.9266,
+    "rejections_by_rule": {
+      "L1_conflicts_with_deterministic_link": 332,
+      "L3_low_confidence": 452,
+      "L4_geo_inconsistent": 488
+    },
+    "tp": 770,
+    "true": 831
+  },
+  "identity_stitching": {
+    "consent_violations_events": 0,
+    "missed_stitch_sessions": 259,
+    "naive_consent_violations_events": 232188,
+    "naive_wrong_customer_sessions": 1390,
+    "respects_consent": true,
+    "sessions_expected_stitched": 25879,
+    "sessions_matching_expected": 0.9968,
+    "sessions_stitched": 25681,
+    "wrong_customer_sessions": 85
+  },
+  "incidents": {
+    "details": [
+      {
+        "alert_id": "ALR-0005",
+        "alert_window": "2026-05-14..2026-06-18",
+        "detected": true,
+        "incident_id": "INC-2026-001",
+        "kind": "broken_step",
+        "root_cause_dimension_expected": "app_version=5.2.0",
+        "root_cause_dimension_found": "app_version=5.2.0",
+        "root_cause_match": true,
+        "true_window": "2026-05-10..2026-06-21"
+      },
+      {
+        "alert_id": "ALR-0011",
+        "alert_window": "2026-08-06..2026-09-03",
+        "detected": true,
+        "incident_id": "INC-2026-002",
+        "kind": "broken_step",
+        "root_cause_dimension_expected": "geo_country=['DE', 'GB']",
+        "root_cause_dimension_found": "geo_country=GB",
+        "root_cause_match": true,
+        "true_window": "2026-08-01..2026-09-05"
+      },
+      {
+        "alert_id": "ALR-0010",
+        "alert_window": "2026-07-02..2026-07-23",
+        "detected": true,
+        "incident_id": "INC-2026-003",
+        "kind": "latency",
+        "root_cause_dimension_expected": null,
+        "root_cause_dimension_found": null,
+        "root_cause_match": null,
+        "true_window": "2026-07-05..2026-07-26"
+      },
+      {
+        "alert_id": "ALR-0001",
+        "alert_window": "2026-03-19..2026-05-14",
+        "detected": true,
+        "incident_id": "INC-2026-004",
+        "kind": "broken_step",
+        "root_cause_dimension_expected": "os=Android 13",
+        "root_cause_dimension_found": "os=Android 13",
+        "root_cause_match": true,
+        "true_window": "2026-03-15..2026-05-10"
+      }
+    ],
+    "detected": 4,
+    "total": 4,
+    "unmatched_alerts": 0
+  },
+  "ingestion_order": {
+    "f1": 1.0,
+    "fn": 0,
+    "fp": 0,
+    "naive_last3_steps_wrong_share": 0.8886,
+    "precision": 1.0,
+    "predicted": 1696,
+    "recall": 1.0,
+    "tp": 1696,
+    "true": 1696
+  },
+  "journey_outcome": {
+    "accuracy_vs_expected": 1.0,
+    "distribution": {
+      "abandoned_cart": 13854,
+      "abandoned_checkout": 2054,
+      "bounced": 9891,
+      "browsed_no_product": 14668,
+      "browsed_product": 53680,
+      "converted": 4178,
+      "support_resolved": 1265,
+      "support_unresolved": 410
+    },
+    "mismatches": 0,
+    "naive_accuracy_without_dedup": 0.99999
+  },
+  "late_arrival": {
+    "f1": 0.9997,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.9995,
+    "predicted": 1820,
+    "recall": 1.0,
+    "tp": 1819,
+    "true": 1819
+  },
+  "sessionization": {
+    "event_time": {
+      "collector_sessions": 98325,
+      "derived_sessions": 98325,
+      "match_rate": 1.0,
+      "mismatched_sessions": 0
+    },
+    "ingestion_time": {
+      "collector_sessions": 98325,
+      "derived_sessions": 100747,
+      "match_rate": 0.975367,
+      "mismatched_sessions": 2422
+    },
+    "ingestion_time_mismatches_explained_by_inversion_or_late": 1.0,
+    "max_within_session_gap_min": 29.202,
+    "sessions_with_gap_20_to_30_min": 77
+  }
+}

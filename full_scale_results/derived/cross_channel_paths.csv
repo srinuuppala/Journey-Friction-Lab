@@ -1,0 +1,61 @@
+path,journeys,converted_journeys,cross_channel,has_support,conversion_rate
+web:browsed_product,30123,0,False,False,0.0
+app:browsed_product,10350,0,False,False,0.0
+web:browsed_no_product,7854,0,False,False,0.0
+web:abandoned_cart,7404,0,False,False,0.0
+web:bounced,5275,0,False,False,0.0
+app:browsed_no_product,4053,0,False,False,0.0
+app:abandoned_cart,3047,0,False,False,0.0
+app:bounced,2975,0,False,False,0.0
+web:converted,2397,2397,False,False,1.0
+web:browsed_product > web:browsed_product,1100,0,False,False,0.0
+app:converted,930,930,False,False,1.0
+web:abandoned_cart > web:browsed_product,461,0,False,False,0.0
+web:abandoned_checkout,444,0,False,False,0.0
+app:browsed_product > app:browsed_product,311,0,False,False,0.0
+web:browsed_no_product > web:browsed_product,297,0,False,False,0.0
+web:browsed_product > web:browsed_no_product,288,0,False,False,0.0
+web:abandoned_cart > web:abandoned_cart,270,0,False,False,0.0
+web:browsed_product > web:abandoned_cart,252,0,False,False,0.0
+app:abandoned_checkout,242,0,False,False,0.0
+web:browsed_no_product > support:support_resolved,212,0,True,True,0.0
+support:support_resolved,211,0,False,True,0.0
+web:bounced > web:browsed_product,206,0,False,False,0.0
+web:browsed_product > web:bounced,184,0,False,False,0.0
+app:abandoned_cart > app:browsed_product,159,0,False,False,0.0
+web:browsed_product > support:support_resolved,155,0,True,True,0.0
+app:browsed_no_product > app:browsed_product,149,0,False,False,0.0
+app:browsed_product > app:browsed_no_product,126,0,False,False,0.0
+web:abandoned_cart > web:converted,113,113,False,False,1.0
+app:browsed_product > app:bounced,105,0,False,False,0.0
+app:bounced > app:browsed_product,97,0,False,False,0.0
+app:browsed_no_product > support:support_resolved,90,0,True,True,0.0
+app:abandoned_cart > app:abandoned_cart,89,0,False,False,0.0
+web:browsed_no_product > web:abandoned_cart,86,0,False,False,0.0
+web:converted > web:browsed_product,80,80,False,False,1.0
+app:browsed_product > app:abandoned_cart,79,0,False,False,0.0
+web:abandoned_cart > web:browsed_no_product,78,0,False,False,0.0
+web:browsed_product > web:browsed_product > web:browsed_product,76,0,False,False,0.0
+web:browsed_no_product > web:browsed_no_product,69,0,False,False,0.0
+web:abandoned_cart > web:bounced,65,0,False,False,0.0
+web:browsed_product > web:converted,65,65,False,False,1.0
+web:abandoned_checkout > web:browsed_product,61,0,False,False,0.0
+web:browsed_no_product > support:support_unresolved > support:support_resolved,59,0,True,True,0.0
+web:browsed_product > support:support_unresolved > support:support_resolved,59,0,True,True,0.0
+app:browsed_product > support:support_resolved,57,0,True,True,0.0
+app:browsed_no_product > app:browsed_no_product,56,0,False,False,0.0
+web:bounced > web:abandoned_cart,54,0,False,False,0.0
+web:browsed_no_product > web:bounced,50,0,False,False,0.0
+app:abandoned_cart > app:converted,46,46,False,False,1.0
+web:abandoned_checkout > web:abandoned_cart,44,0,False,False,0.0
+web:bounced > web:browsed_no_product,43,0,False,False,0.0
+app:abandoned_cart > app:bounced,40,0,False,False,0.0
+support:support_unresolved > support:support_resolved,40,0,False,True,0.0
+app:abandoned_cart > app:browsed_no_product,37,0,False,False,0.0
+app:browsed_no_product > app:abandoned_cart,37,0,False,False,0.0
+app:browsed_no_product > app:bounced,36,0,False,False,0.0
+web:bounced > web:bounced,33,0,False,False,0.0
+app:bounced > app:abandoned_cart,31,0,False,False,0.0
+app:converted > app:browsed_product,31,31,False,False,1.0
+app:bounced > app:bounced,29,0,False,False,0.0
+app:browsed_product > web:browsed_product,29,0,True,False,0.0

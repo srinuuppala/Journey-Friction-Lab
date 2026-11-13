@@ -1,0 +1,3966 @@
+{
+  "by_category": {
+    "arithmetic": "18/18 pass",
+    "consistency": "8/8 pass",
+    "dates": "18/18 pass",
+    "derived": "10/10 pass",
+    "enum": "60/60 pass",
+    "fk": "38/38 pass",
+    "format": "57/57 pass",
+    "labelled": "5/5 pass",
+    "leakage": "2/2 pass",
+    "lifecycle": "9/9 pass",
+    "pk": "19/19 pass",
+    "required": "158/158 pass",
+    "rules": "11/11 pass",
+    "schema": "19/19 pass",
+    "unique": "6/6 pass"
+  },
+  "checks": 438,
+  "checks_detail": [
+    {
+      "category": "schema",
+      "check": "customer: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "customer: primary key unique & non-null",
+      "detail": "pk=('customer_id',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "customer.customer_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "customer.customer_id matches ^CUS-\\d{6}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "customer.created_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "customer.created_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "customer.country not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "customer.country in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "customer.segment not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "customer.segment in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "customer.signup_channel not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "customer.signup_channel in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "customer.email_hash not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "customer.email_hash matches ^sha256:[0-9a-f]{64}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "unique",
+      "check": "customer.email_hash unique",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "customer.analytics_consent_status not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "customer.analytics_consent_status in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "customer.marketing_consent_status not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "customer.marketing_consent_status in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "customer.consent_status_as_of not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "customer.consent_status_as_of ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "customer.last_authenticated_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "customer.lifecycle_status not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "customer.lifecycle_status in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "consent_event: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "consent_event: primary key unique & non-null",
+      "detail": "pk=('consent_event_id',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "consent_event.consent_event_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "consent_event.consent_event_id matches ^CNS-\\d{7}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "consent_event.customer_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "consent_event.consent_type not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "consent_event.consent_type in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "consent_event.action not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "consent_event.action in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "consent_event.effective_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "consent_event.effective_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "consent_event.recorded_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "consent_event.recorded_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "consent_event.source not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "consent_event.source in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "consent_event.policy_version not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "consent_event.policy_version in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "device: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "device: primary key unique & non-null",
+      "detail": "pk=('device_id',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "device.device_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "device.device_id matches ^DEV-\\d{7}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "device.anonymous_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "device.anonymous_id matches ^ANO-[0-9a-f]{10}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "unique",
+      "check": "device.anonymous_id unique",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "device.platform not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "device.platform in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "device.device_type not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "device.device_type in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "device.os not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "device.first_seen_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "device.first_seen_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "device.last_seen_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "device.last_seen_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "identity_link: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "identity_link: primary key unique & non-null",
+      "detail": "pk=('link_id',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "identity_link.link_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "identity_link.link_id matches ^IDL-\\d{7}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "identity_link.device_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "identity_link.anonymous_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "identity_link.customer_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "identity_link.link_method not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "identity_link.link_method in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "identity_link.confidence not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "identity_link.valid_from not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "identity_link.valid_from ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "identity_link.source_system not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "identity_link.source_system in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "identity_link.created_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "identity_link.created_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "page: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "page: primary key unique & non-null",
+      "detail": "pk=('page_id',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "page.page_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "page.page_id matches ^PAG-\\d{4}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "page.channel not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "page.channel in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "page.page_type not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "page.page_type in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "page.path not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "page.category in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "page.help_topic in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "page.funnel_stage not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "page.funnel_stage in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "page.is_active not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "page.created_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "page.created_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "product: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "product: primary key unique & non-null",
+      "detail": "pk=('product_id',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "product.product_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "product.product_id matches ^PRD-\\d{6}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "product.name not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "product.brand not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "product.category not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "product.category in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "product.list_price not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "product.currency not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "product.currency in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "product.launched_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "product.launched_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "product.discontinued_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "product.lifecycle_status not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "product.lifecycle_status in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "experiment: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "experiment: primary key unique & non-null",
+      "detail": "pk=('experiment_id',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment.experiment_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "experiment.experiment_id matches ^EXP-2026-\\d{6}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment.name not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "unique",
+      "check": "experiment.name unique",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment.hypothesis not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment.channel not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "experiment.channel in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment.target_step not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "experiment.target_step in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment.status not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "experiment.status in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment.allocation_treatment not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment.assignment_unit not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "experiment.assignment_unit in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment.owner_team not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment.created_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "experiment.created_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment.start_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "experiment.start_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment.end_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "experiment.end_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "experiment_assignment: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "experiment_assignment: primary key unique & non-null",
+      "detail": "pk=('experiment_id', 'session_id')",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment_assignment.experiment_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment_assignment.session_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment_assignment.variant not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "experiment_assignment.variant in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment_assignment.assigned_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "experiment_assignment.assigned_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment_assignment.assignment_unit not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "experiment_assignment.assignment_unit in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "experiment_assignment.device_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "session: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "session: primary key unique & non-null",
+      "detail": "pk=('session_id',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "session.session_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "session.session_id matches ^SES-2026-\\d{6}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "session.channel not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "session.channel in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "session.session_start_ts not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "session.session_start_ts ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "session.session_end_ts not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "session.session_end_ts ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "session.duration_s not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "session.event_count not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "session.traffic_source not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "session.traffic_source in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "session.utm_campaign matches ^CMP-2026\\d{2}-[A-Z]+$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "session.geo_country in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "session.app_version in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "session.support_medium in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "session.sessionization_rule not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "session.sessionization_rule in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "journey_event: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "journey_event: primary key unique & non-null",
+      "detail": "pk=('event_id',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_event.event_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "journey_event.event_id matches ^EVT-SES-2026-\\d{6}-\\d{6}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_event.session_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_event.event_type not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "journey_event.event_type in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_event.event_ts not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "journey_event.event_ts ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_event.ingestion_ts not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "journey_event.ingestion_ts ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_event.channel not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "journey_event.channel in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_event.source_system not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "journey_event.source_system in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_event.auth_state not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "journey_event.auth_state in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_event.client_event_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "journey_event.client_event_id matches ^ce-[0-9a-f]{16}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "journey_event.error_code in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "cart: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "cart: primary key unique & non-null",
+      "detail": "pk=('cart_id',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "cart.cart_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "cart.cart_id matches ^CRT-2026-\\d{6}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "cart.session_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "cart.created_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "cart.created_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "cart.checkout_started_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "cart.status not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "cart.status in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "cart.status_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "cart.status_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "cart.item_count not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "cart.subtotal not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "cart_item: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "cart_item: primary key unique & non-null",
+      "detail": "pk=('cart_item_id',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "cart_item.cart_item_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "cart_item.cart_item_id matches ^CIT-CRT-2026-\\d{6}-\\d{2}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "cart_item.cart_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "cart_item.product_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "cart_item.quantity not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "cart_item.unit_price not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "cart_item.line_amount not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "cart_item.added_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "cart_item.added_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "cart_item.removed_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "cart_item.is_active not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "order: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "order: primary key unique & non-null",
+      "detail": "pk=('order_id',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order.order_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "order.order_id matches ^ORD-2026-\\d{6}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order.cart_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "unique",
+      "check": "order.cart_id unique",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order.session_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order.order_ts not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "order.order_ts ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order.status not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "order.status in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order.status_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "order.status_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order.ship_country not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "order.ship_country in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order.currency not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "order.currency in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order.payment_method not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "order.payment_method in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order.item_count not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order.subtotal not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order.discount not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order.tax not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order.shipping_fee not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order.total not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "order_line: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "order_line: primary key unique & non-null",
+      "detail": "pk=('order_line_id',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order_line.order_line_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "order_line.order_line_id matches ^OLN-ORD-2026-\\d{6}-\\d{2}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order_line.order_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order_line.line_no not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order_line.product_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order_line.quantity not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order_line.unit_price not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "order_line.line_amount not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "support_ticket: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "support_ticket: primary key unique & non-null",
+      "detail": "pk=('ticket_id',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "support_ticket.ticket_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "support_ticket.ticket_id matches ^TCK-2026-\\d{6}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "support_ticket.first_contact_session_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "support_ticket.medium not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "support_ticket.medium in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "support_ticket.category not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "support_ticket.category in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "support_ticket.priority not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "support_ticket.priority in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "support_ticket.status not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "support_ticket.status in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "support_ticket.opened_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "support_ticket.opened_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "support_ticket.first_response_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "support_ticket.escalated_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "support_ticket.resolved_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "support_ticket.closed_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "support_ticket.csat_score in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "support_agent: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "support_agent: primary key unique & non-null",
+      "detail": "pk=('agent_id',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "support_agent.agent_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "support_agent.agent_id matches ^AGT-\\d{4}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "support_agent.tier not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "support_agent.tier in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "support_agent.team not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "support_agent.team in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "support_agent.site not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "support_agent.hired_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "support_agent.hired_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "status_history: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "status_history: primary key unique & non-null",
+      "detail": "pk=('status_history_id',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "status_history.status_history_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "status_history.status_history_id matches ^STH-\\d{8}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "status_history.entity_type not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "status_history.entity_type in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "status_history.entity_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "status_history.to_status not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "status_history.changed_at not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "status_history.changed_at ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "status_history.changed_by not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "status_history.changed_by in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "event_taxonomy: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "event_taxonomy: primary key unique & non-null",
+      "detail": "pk=('event_type',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "event_taxonomy.event_type not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "event_taxonomy.event_type in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "event_taxonomy.category not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "event_taxonomy.category in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "event_taxonomy.funnel_stage not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "event_taxonomy.funnel_stage in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "event_taxonomy.funnel_stage_name in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "event_taxonomy.allowed_channels not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "event_taxonomy.description not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "schema",
+      "check": "journey_outcome: columns match dictionary",
+      "detail": "missing=[] extra=[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "pk",
+      "check": "journey_outcome: primary key unique & non-null",
+      "detail": "pk=('outcome_id',)",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_outcome.outcome_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "journey_outcome.outcome_id matches ^OUT-SES-2026-\\d{6}$",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_outcome.session_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "unique",
+      "check": "journey_outcome.session_id unique",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_outcome.outcome_type not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "journey_outcome.outcome_type in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_outcome.rule_id not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "journey_outcome.rule_id in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_outcome.furthest_stage not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "enum",
+      "check": "journey_outcome.furthest_stage in allowed values",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_outcome.furthest_stage_name not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_outcome.converted not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_outcome.friction_event_count not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_outcome.support_contact_flag not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_outcome.valid_event_count not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_outcome.first_event_ts not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "journey_outcome.first_event_ts ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_outcome.last_event_ts not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "format",
+      "check": "journey_outcome.last_event_ts ISO-8601 UTC",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_outcome.duration_s not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "required",
+      "check": "journey_outcome.derivation_version not null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "consent_event.customer_id -> customer.customer_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "identity_link.device_id -> device.device_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "identity_link.customer_id -> customer.customer_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "experiment_assignment.experiment_id -> experiment.experiment_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "experiment_assignment.session_id -> session.session_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "experiment_assignment.device_id -> device.device_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "session.device_id -> device.device_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "session.customer_id -> customer.customer_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "session.landing_page_id -> page.page_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "session.ticket_id -> support_ticket.ticket_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "journey_event.session_id -> session.session_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "journey_event.event_type -> event_taxonomy.event_type",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "journey_event.device_id -> device.device_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "journey_event.customer_id -> customer.customer_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "journey_event.page_id -> page.page_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "journey_event.product_id -> product.product_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "journey_event.cart_id -> cart.cart_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "journey_event.order_id -> order.order_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "journey_event.ticket_id -> support_ticket.ticket_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "cart.session_id -> session.session_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "cart.customer_id -> customer.customer_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "cart_item.cart_id -> cart.cart_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "cart_item.product_id -> product.product_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "order.cart_id -> cart.cart_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "order.session_id -> session.session_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "order.customer_id -> customer.customer_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "order_line.order_id -> order.order_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "order_line.product_id -> product.product_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "support_ticket.customer_id -> customer.customer_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "support_ticket.origin_session_id -> session.session_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "support_ticket.first_contact_session_id -> session.session_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "support_ticket.order_id -> order.order_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "support_ticket.agent_id -> support_agent.agent_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "journey_outcome.session_id -> session.session_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "journey_outcome.order_id -> order.order_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "journey_outcome.cart_id -> cart.cart_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "journey_outcome.ticket_id -> support_ticket.ticket_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "fk",
+      "check": "status_history.entity_id -> polymorphic parent",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "consistency",
+      "check": "event_id prefix equals session_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "consistency",
+      "check": "event.channel = session.channel",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "consistency",
+      "check": "event.device_id = session.device_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "consistency",
+      "check": "session.anonymous_id = device.anonymous_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "consistency",
+      "check": "identity_link.anonymous_id = device.anonymous_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "consistency",
+      "check": "event required references present (taxonomy)",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "consistency",
+      "check": "event type allowed on channel",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "ingestion_ts >= event_ts",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "derived",
+      "check": "session start/end = min/max(event_ts)",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "derived",
+      "check": "session.event_count = count(events)",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "derived",
+      "check": "session.duration_s = end - start",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "authenticated events after customer.created_at",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "consent effective_at >= customer.created_at",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "consent recorded_at >= effective_at",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "identity_link.valid_from >= customer.created_at",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "product active at event time (launched <= ts < discontinued)",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "product discontinued_at > launched_at",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "experiment created <= start < end",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "assignment within experiment window",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "rules",
+      "check": "no assignments for draft experiments",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "rules",
+      "check": "assignment channel eligible",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "rules",
+      "check": "variant sticky per (experiment, device)",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "cart checkout_started_at >= created_at",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "cart_item removed_at >= added_at",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "order_ts >= cart.created_at",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "consistency",
+      "check": "order.session_id = cart.session_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "order_ts within its session",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "ticket opened <= first_response <= escalated <= resolved <= closed",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "ticket opened_at = first contact session start",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "ticket opened after origin session start",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "status_history changed_at <= snapshot",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "dates",
+      "check": "device last_seen >= first_seen",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "order_line.line_amount = quantity*unit_price",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "order.subtotal = sum(order_line.line_amount)",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "order.item_count = sum(order_line.quantity)",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "order_line.line_no contiguous 1..n",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "order.total = subtotal - discount + tax + shipping_fee",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "order.tax = round((subtotal-discount)*country_rate, 2)",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "shipping_fee rule (0 if net >= 50 else 4.99)",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "discount is 0 or 10% of subtotal",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "cart.subtotal = sum(active cart_item.line_amount)",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "cart.item_count = sum(active quantity)",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "cart_item.line_amount = quantity*unit_price",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "cart_item.unit_price = product.list_price",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "cart_item.is_active = removed_at is null",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "cart_item.quantity = sum(add_to_cart.quantity) within the line's lifetime",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "unique",
+      "check": "at most one active cart_item per (cart, product)",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "order lines = active cart items (product, qty)",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "purchase.value = order.total",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "cart event value = quantity*list_price",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "arithmetic",
+      "check": "ticket.csat_score = csat_submitted.value",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "lifecycle",
+      "check": "status transitions allowed",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "lifecycle",
+      "check": "status chain continuous (from = previous to)",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "lifecycle",
+      "check": "status changes chronological",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "lifecycle",
+      "check": "cart.status = last status_history",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "lifecycle",
+      "check": "order.status = last status_history",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "lifecycle",
+      "check": "support_ticket.status = last status_history",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "lifecycle",
+      "check": "experiment.status = last status_history",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "lifecycle",
+      "check": "product.status = last status_history",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "lifecycle",
+      "check": "converted carts have exactly one order",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "derived",
+      "check": "customer.analytics_consent_status derived from consent_event",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "derived",
+      "check": "customer.marketing_consent_status derived from consent_event",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "rules",
+      "check": "email/push traffic only for persons with marketing consent (vs. truth person)",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "rules",
+      "check": "web/app: no within-session gap > 30 min (event_ts)",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "rules",
+      "check": "web/app sessions of a device separated by > 30 min",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "rules",
+      "check": "browser null iff app",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "rules",
+      "check": "app_version only on app sessions",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "rules",
+      "check": "login links have confidence 1.0",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "rules",
+      "check": "support sessions reference a ticket",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "rules",
+      "check": "ticket priority rule",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "derived",
+      "check": "journey_outcome 1:1 with session",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "derived",
+      "check": "outcome_id = 'OUT-' + session_id",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "derived",
+      "check": "converted outcome has an order",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "derived",
+      "check": "valid_event_count <= session.event_count",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "derived",
+      "check": "deduplicated conversions = orders (no double counting)",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "labelled",
+      "check": "duplicate client_event_id rows are all labelled (and vice versa)",
+      "detail": "",
+      "expected": 0,
+      "kind": "labelled",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "labelled",
+      "check": "orders with >1 purchase event are all labelled (and vice versa)",
+      "detail": "",
+      "expected": 0,
+      "kind": "labelled",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "labelled",
+      "check": "sessions with ingestion/occurrence inversion (excl. labelled duplicates) are all labelled (and vice versa)",
+      "detail": "found=1696 labelled=1696",
+      "expected": 0,
+      "kind": "labelled",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "labelled",
+      "check": "every anomaly references an existing entity",
+      "detail": "",
+      "expected": 0,
+      "kind": "labelled",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "labelled",
+      "check": "session_labels cover every session exactly once",
+      "detail": "",
+      "expected": 0,
+      "kind": "labelled",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "leakage",
+      "check": "no ground-truth columns in input tables",
+      "detail": "[]",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "category": "leakage",
+      "check": "no is_bot/actor flags in session table",
+      "detail": "",
+      "expected": 0,
+      "kind": "hard",
+      "status": "PASS",
+      "violations": 0
+    }
+  ],
+  "failed": 0,
+  "passed": true
+}

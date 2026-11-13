@@ -1,0 +1,12 @@
+alert_id,kind,channel,signal,segment,start_date,end_date,weeks,peak_value,baseline_value,min_p_value,excess_events,top_dimension,top_dimension_value,top_dimension_share_of_excess
+ALR-0001,error_rate,app,add_to_cart_failed,all,2026-03-19,2026-05-14,8,0.1348,0.0083,5.51e-17,100.0,os,Android 13,1.0
+ALR-0002,error_rate,app,add_to_cart_failed,os=Android 13,2026-03-19,2026-05-14,8,0.5769,0.0407,6.25e-16,98.0,os,Android 13,
+ALR-0003,error_rate,app,add_to_cart_failed,geo_country=US,2026-03-26,2026-04-02,1,0.2174,0.007,7.89e-07,5.0,geo_country,US,
+ALR-0004,error_rate,app,add_to_cart_failed,geo_country=IN,2026-04-09,2026-05-07,4,0.1833,0.0077,3.37e-12,25.0,geo_country,IN,
+ALR-0005,error_rate,app,payment_error,all,2026-05-14,2026-06-18,5,0.6977,0.0487,2.11e-24,81.0,app_version,5.2.0,1.0
+ALR-0006,error_rate,app,payment_error,geo_country=IN,2026-05-21,2026-06-18,4,0.7647,0.0474,4.62e-12,29.0,geo_country,IN,
+ALR-0007,error_rate,app,payment_error,geo_country=US,2026-05-28,2026-06-18,3,0.8,0.0504,6.61e-08,17.0,geo_country,US,
+ALR-0008,error_rate,app,payment_error,os=Android 14,2026-06-11,2026-06-18,1,0.75,0.0714,3.19e-07,8.0,os,Android 14,
+ALR-0009,error_rate,app,payment_error,os=iOS 18,2026-06-11,2026-06-18,1,0.7778,0.0571,1.21e-06,6.0,os,iOS 18,
+ALR-0010,latency_p50,web,search_page_load_ms,all,2026-07-02,2026-07-23,3,4970.5,802.0,,,,,
+ALR-0011,error_rate,web,shipping_validation_error,all,2026-08-06,2026-09-03,4,0.1221,0.018,4.86e-09,32.0,geo_country,GB,0.525

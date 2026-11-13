@@ -1,0 +1,30 @@
+{
+  "row_counts": {
+    "customer": 20000,
+    "consent_event": 43515,
+    "device": 46937,
+    "identity_link": 10046,
+    "page": 42,
+    "product": 1500,
+    "experiment": 6,
+    "support_agent": 40,
+    "event_taxonomy": 29,
+    "session": 100000,
+    "cart": 20086,
+    "order": 4178,
+    "cart_item": 36470,
+    "order_line": 4734,
+    "support_ticket": 1322,
+    "experiment_assignment": 111792,
+    "journey_event": 2039088,
+    "status_history": 70234,
+    "journey_outcome": 100000
+  },
+  "foreign_key_violations": 0,
+  "join_counts": {
+    "events_join_sessions": 2039088,
+    "orders_join_carts_sessions": 4178,
+    "outcomes_join_sessions": 100000
+  },
+  "joins_complete": true
+}

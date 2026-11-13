@@ -1,0 +1,16 @@
+{
+  "event_time": {
+    "collector_sessions": 98325,
+    "derived_sessions": 98325,
+    "match_rate": 1.0,
+    "mismatched_sessions": 0
+  },
+  "ingestion_time": {
+    "collector_sessions": 98325,
+    "derived_sessions": 100747,
+    "match_rate": 0.975367,
+    "mismatched_sessions": 2422
+  },
+  "max_within_session_gap_min": 29.202,
+  "sessions_with_gap_20_to_30_min": 77
+}

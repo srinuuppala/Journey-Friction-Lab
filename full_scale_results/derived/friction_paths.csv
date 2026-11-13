@@ -1,0 +1,202 @@
+channel,path,has_friction,abandoned_sessions,share_of_channel_abandonment
+web,product,False,2429,0.22995
+web,product > category > product,False,1031,0.0976
+web,category > product,False,868,0.08217
+web,product > cart > product,False,787,0.07451
+web,product > search > product,False,780,0.07384
+web,product > cart,False,721,0.06826
+app,product,False,638,0.14457
+web,category > product > cart,False,561,0.05311
+web,home > category > product,False,451,0.0427
+web,product > cart > checkout_shipping,False,417,0.03948
+app,product > category > product,False,388,0.08792
+app,home > category > product,False,372,0.0843
+app,category > product,False,337,0.07637
+web,home > search > product,False,331,0.03134
+app,product > search > product,False,328,0.07433
+app,product > cart > product,False,290,0.06571
+web,search > product > cart,False,272,0.02575
+app,home > search > product,False,261,0.05914
+app,category > product > cart,False,259,0.05869
+web,category > search > product,False,247,0.02338
+web,home > product,False,237,0.02244
+app,home > product,False,203,0.046
+app,product > cart > checkout_shipping,False,189,0.04283
+app,product > cart,False,159,0.03603
+app,search > product > cart,False,152,0.03444
+app,category > search > product,False,83,0.01881
+web,category > product > category,False,78,0.00738
+web,category > product > search,False,77,0.00729
+app,home > product > cart,False,75,0.017
+web,cart > checkout_shipping > help,False,70,0.00663
+web,home > product > cart,False,67,0.00634
+web,search > category > product,False,66,0.00625
+web,search > product > category,False,60,0.00568
+web,product > category,False,57,0.0054
+web,product > search,False,57,0.0054
+web,search > product > search,False,48,0.00454
+web,cart > product > category,False,46,0.00435
+app,cart > checkout_shipping > help,False,45,0.0102
+web,cart > product > cart,False,44,0.00417
+web,checkout_shipping > checkout_payment > payment_error,True,44,0.00417
+web,cart > product > search,False,43,0.00407
+app,checkout_shipping > checkout_payment > payment_error,True,43,0.00974
+web,product > help > product,False,42,0.00398
+web,cart > checkout_shipping > shipping_validation_error,True,39,0.00369
+web,product > help,False,37,0.0035
+web,category > product > help,False,34,0.00322
+app,category > product > category,False,33,0.00748
+app,search > category > product,False,33,0.00748
+web,product > category > search,False,30,0.00284
+web,category > home > product,False,29,0.00275
+app,search > product > category,False,29,0.00657
+web,search > product > help,False,29,0.00275
+web,cart > checkout_shipping > cart,False,28,0.00265
+app,cart > product > cart,False,28,0.00634
+web,help > product,False,28,0.00265
+app,category > product > search,False,26,0.00589
+app,cart > product > search,False,23,0.00521
+web,help > home > product,False,23,0.00218
+app,category > product > help,False,22,0.00499
+app,product > category > search,False,21,0.00476
+app,product > search,False,21,0.00476
+web,cart > product > help,False,20,0.00189
+web,checkout_shipping > cart > product,False,20,0.00189
+app,cart > checkout_shipping > cart,False,19,0.00431
+app,search > product > search,False,19,0.00431
+web,help > product > cart,False,18,0.0017
+app,product > category,False,18,0.00408
+app,help > home > product,False,17,0.00385
+web,product > cart > page_error,True,15,0.00142
+web,product > page_error > product,True,15,0.00142
+app,search > product > help,False,15,0.0034
+web,category > product > page_error,True,14,0.00133
+app,product > help > product,False,14,0.00317
+web,cart > checkout_shipping > checkout_payment,False,13,0.00123
+app,cart > checkout_shipping > shipping_validation_error,True,13,0.00295
+app,cart > product > category,False,13,0.00295
+app,checkout_payment > payment_error > help,True,13,0.00295
+app,category > home > product,False,12,0.00272
+web,product > page_error,True,11,0.00104
+web,cart > checkout_shipping > page_error,True,10,0.00095
+web,home > product > category,False,10,0.00095
+web,product > category > home,False,10,0.00095
+web,product > search > category,False,10,0.00095
+web,checkout_shipping > help > product,False,9,0.00085
+web,help > home > search,False,9,0.00085
+app,help > product,False,9,0.00204
+web,product > help > home,False,9,0.00085
+app,product > page_error > product,True,9,0.00204
+app,cart > product > help,False,8,0.00181
+app,checkout_shipping > cart > checkout_shipping,False,8,0.00181
+web,checkout_shipping > cart > checkout_shipping,False,8,0.00076
+app,checkout_shipping > cart > product,False,8,0.00181
+web,checkout_shipping > checkout_payment > page_error,True,8,0.00076
+web,home > help > product,False,8,0.00076
+app,home > product > search,False,8,0.00181
+app,product > cart > page_error,True,8,0.00181
+web,checkout_shipping > shipping_validation_error > help,True,7,0.00066
+web,home > product > search,False,7,0.00066
+app,payment_error > checkout_payment > payment_error,True,7,0.00159
+app,product > add_to_cart_failed > product,True,7,0.00159
+app,product > category > home,False,7,0.00159
+web,search > product > page_error,True,7,0.00066
+web,checkout_shipping > shipping_validation_error > checkout_shipping,True,6,0.00057
+app,home > help > product,False,6,0.00136
+app,product > help,False,6,0.00136
+app,product > help > home,False,6,0.00136
+app,search > product > page_error,True,6,0.00136
+web,checkout_payment > payment_error > help,True,5,0.00047
+web,checkout_shipping > help > home,False,5,0.00047
+web,help > home > category,False,5,0.00047
+web,help > product > category,False,5,0.00047
+app,home > product > category,False,5,0.00113
+web,product > category > page_error,True,5,0.00047
+app,cart > product > page_error,True,4,0.00091
+web,cart > product > page_error,True,4,0.00038
+web,category > home > category,False,4,0.00038
+app,category > page_error > product,True,4,0.00091
+app,checkout_shipping > help > home,False,4,0.00091
+app,checkout_shipping > help > product,False,4,0.00091
+app,help > home > category,False,4,0.00091
+app,help > product > cart,False,4,0.00091
+web,help > product > search,False,4,0.00038
+web,home > product > help,False,4,0.00038
+web,home > product > page_error,True,4,0.00038
+web,page_error > product > cart,True,4,0.00038
+app,page_error > search > product,True,4,0.00091
+web,product > page_error > cart,True,4,0.00038
+web,search > page_error > product,True,4,0.00038
+web,shipping_validation_error > checkout_shipping > shipping_validation_error,True,4,0.00038
+app,cart > checkout_shipping > page_error,True,3,0.00068
+web,category > home > search,False,3,0.00028
+web,category > page_error > product,True,3,0.00028
+app,category > product > add_to_cart_failed,True,3,0.00068
+app,category > product > page_error,True,3,0.00068
+app,checkout_shipping > shipping_validation_error > checkout_shipping,True,3,0.00068
+app,home > category > search,False,3,0.00068
+app,login > home > product,False,3,0.00068
+web,login > home > product,False,3,0.00028
+web,page_error > cart > product,True,3,0.00028
+app,page_error > category > product,True,3,0.00068
+app,page_error > product > cart,True,3,0.00068
+app,product > search > category,False,3,0.00068
+web,search > category > search,False,3,0.00028
+app,add_to_cart_failed > product > search,True,2,0.00045
+web,category > search > category,False,2,0.00019
+web,checkout_payment > payment_error > checkout_payment,True,2,0.00019
+app,checkout_shipping > shipping_validation_error > help,True,2,0.00045
+web,help > home > help,False,2,0.00019
+app,help > home > search,False,2,0.00045
+web,help > product > page_error,True,2,0.00019
+web,home > category > search,False,2,0.00019
+app,home > product > page_error,True,2,0.00045
+app,page_error > cart > product,True,2,0.00045
+web,page_error > search > product,True,2,0.00019
+web,payment_error > help > home,True,2,0.00019
+app,product > add_to_cart_failed,True,2,0.00045
+app,product > page_error,True,2,0.00045
+app,product > page_error > search,True,2,0.00045
+web,product > search > page_error,True,2,0.00019
+app,add_to_cart_failed > cart > product,True,1,0.00023
+app,add_to_cart_failed > product > add_to_cart_failed,True,1,0.00023
+app,cart > checkout_shipping > checkout_payment,False,1,0.00023
+web,cart > page_error > product,True,1,9e-05
+app,category > home > category,False,1,0.00023
+app,category > home > help,False,1,0.00023
+web,category > home > help,False,1,9e-05
+web,category > page_error > category,True,1,9e-05
+app,checkout_shipping > checkout_payment > page_error,True,1,0.00023
+app,checkout_shipping > help > page_error,True,1,0.00023
+web,checkout_shipping > help > page_error,True,1,9e-05
+web,checkout_shipping > page_error > checkout_payment,True,1,9e-05
+web,help > page_error > home,True,1,9e-05
+app,help > product > category,False,1,0.00023
+app,help > product > help,False,1,0.00023
+app,help > product > search,False,1,0.00023
+app,home > category > home,False,1,0.00023
+web,home > login > home,False,1,9e-05
+app,home > page_error > product,True,1,0.00023
+app,home > product > help,False,1,0.00023
+app,home > search > category,False,1,0.00023
+web,home > search > category,False,1,9e-05
+app,page_error > cart > checkout_shipping,True,1,0.00023
+web,page_error > category > product,True,1,9e-05
+app,page_error > home > product,True,1,0.00023
+web,page_error > product > category,True,1,9e-05
+web,page_error > product > help,True,1,9e-05
+app,page_error > product > search,True,1,0.00023
+app,payment_error > help > page_error,True,1,0.00023
+app,payment_error > help > product,True,1,0.00023
+web,payment_error > help > product,True,1,9e-05
+app,product > category > page_error,True,1,0.00023
+web,product > help > page_error,True,1,9e-05
+web,product > page_error > category,True,1,9e-05
+web,product > page_error > help,True,1,9e-05
+web,product > page_error > search,True,1,9e-05
+app,product > search > page_error,True,1,0.00023
+web,search > category > page_error,True,1,9e-05
+app,search > page_error > search,True,1,0.00023
+web,shipping_validation_error > checkout_shipping > help,True,1,9e-05
+app,shipping_validation_error > checkout_shipping > shipping_validation_error,True,1,0.00023
+web,shipping_validation_error > help > product,True,1,9e-05
